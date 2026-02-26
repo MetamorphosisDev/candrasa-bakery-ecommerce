@@ -5,6 +5,7 @@ import Lokasi from "./pages/lokasi";
 import NewsAndPromo from "./pages/newsandpromo";
 import FAQCustomer from "./pages/faqcustomer";
 import About from "./pages/about";
+import Login from "./pages/login_user"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/newsandpromo" element={<NewsAndPromo />} />
         <Route path="/faq" element={<FAQCustomer />} />
         <Route path="/about" element={<About />} />
+        <Route path="/login_user" element={<Login />}></Route>
       </Routes>
     </BrowserRouter>
   );

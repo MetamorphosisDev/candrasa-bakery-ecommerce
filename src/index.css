@@ -16,13 +16,3 @@
   --font-poppins: 'Poppins', sans-serif;
   --font-inter: 'Inter', sans-serif;
 }
-/* <li className="list-none">
-  <a
-    href="#newsandpromo"
-    className="group relative inline-block text-white text-sm font-bold"
-  >
-    News &amp; Promo
-
-    <span className="absolute left-0 -bottom-1 h-[2px] w-full scale-x-0 origin-center bg-white transition-transform duration-300 ease-out group-hover:scale-x-100" />
-  </a>
-</li> */
