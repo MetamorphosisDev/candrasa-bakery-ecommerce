@@ -16,3 +16,23 @@
   --font-poppins: 'Poppins', sans-serif;
   --font-inter: 'Inter', sans-serif;
 }
+
+/* Tambahkan di global.css atau style module */
+.scrollbar-custom::-webkit-scrollbar {
+  height: 8px;
+  /* tinggi scrollbar horizontal */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  /* warna track (background) */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+  /* warna scroll bar */
+  border-radius: 9999px;
+  /* bulat */
+  border: 2px solid #e5e7eb;
+  /* border sekitar */
+}
