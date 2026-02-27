@@ -1,3 +1,5 @@
+
+
 export type Banner = {
   Id: number;
   img: string;
@@ -10,14 +12,14 @@ export const data: Banner[] = [
   }, 
   {
     Id: 2,
-    img: '/Images/Gambar-halaman-utama-banner.png',
+    img: '/Images/photo_6125025193106279804_y.jpg',
   },
     {
     Id: 3,
-    img: '/Images/Gambar-halaman-utama-banner.png',
+    img: '/Images/mqdefault.jpg',
   },
     {
     Id: 4,
-    img: '/Images/Gambar-halaman-utama-banner.png',
+    img: '/Images/hq720.jpg',
   }
 ]; 

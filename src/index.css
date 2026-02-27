@@ -17,22 +17,23 @@
   --font-inter: 'Inter', sans-serif;
 }
 
-/* Tambahkan di global.css atau style module */
-.scrollbar-custom::-webkit-scrollbar {
-  height: 8px;
-  /* tinggi scrollbar horizontal */
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-.scrollbar-custom::-webkit-scrollbar-track {
-  background: #e5e7eb;
-  /* warna track (background) */
+.animate-scroll {
+  animation: scroll-horizontal 40s linear infinite;
 }
 
-.scrollbar-custom::-webkit-scrollbar-thumb {
-  background-color: #3b82f6;
-  /* warna scroll bar */
-  border-radius: 9999px;
-  /* bulat */
-  border: 2px solid #e5e7eb;
-  /* border sekitar */
+.animate-scroll:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
 }

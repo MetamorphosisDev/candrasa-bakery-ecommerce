@@ -20,18 +20,9 @@ function Searchbar() {
           className="w-full rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 pl-10 text-sm 
               text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/40 focus:bg-white/20 transition-all duration-300"
         />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth="2"
-          fill="none"
-          className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50"
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+          <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
           />
         </svg>
       </form>
