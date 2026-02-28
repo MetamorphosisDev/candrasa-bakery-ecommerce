@@ -1,77 +1,75 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { data } from "../Data/imagedata";
 
+const GAP = 20; // gap-5 = 20px
+
 const BannerScrolling: React.FC = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const doubled = [...data, ...data];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  // Ambil lebar card secara dinamis, fallback 0 kalau belum dirender
+  const getCardWidth = () => {
+    if (cardRef.current) {
+      return cardRef.current.offsetWidth + GAP;
+    }
+    return 0;
+  };
+
+  const handleNext = () => {
+    if (currentIndex < data.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    } else {
+      setCurrentIndex(0); // balik ke awal
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    } else {
+      setCurrentIndex(data.length - 1); // balik ke akhir
+    }
+  };
 
   return (
-    <div className="relative overflow-hidden py-8">
+    <div className="hidden md:block relative overflow-hidden py-8">
 
-      {/* Track scroll */}
+      {/* Track slide */}
       <div
-        className={`flex w-max gap-5 px-6 py-4 ${
-          hoveredIndex !== null ? "[animation-play-state:paused]" : ""
-        } [animation:scroll-x_35s_linear_infinite]`}
+        className="flex gap-5 px-6 py-4 transition-transform duration-500"
+        style={{ transform: `translateX(-${currentIndex * getCardWidth()}px)` }}
       >
-        {doubled.map((banner, index) => (
+        {data.map((banner, index) => (
           <div
             key={index}
-            className={`
-              relative flex-shrink-0 cursor-pointer overflow-hidden rounded-2xl
-
-              w-[360px] h-[210px]
-              transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
-              ${
-                hoveredIndex === index
-                  ? "scale-110 -translate-y-1.5 shadow-2xl z-20"
-                  : "scale-100 translate-y-0 shadow-none z-0"
-              }
-            `}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
+            ref={index === 0 ? cardRef : null} // hanya ukur card pertama
+            className="relative shrink-0 w-[80vw] sm:w-[60vw] md:w-[45vw] lg:w-[680px] overflow-hidden rounded-2xl cursor-pointer"
           >
-            {/* Gambar */}
             <img
               src={banner.img}
               alt={`Banner ${banner.Id}`}
-              className={`
-                w-full h-full object-cover block
-                transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
-                ${hoveredIndex === index ? "scale-[1.07]" : "scale-100"}
-              `}
+              className="w-full h-full object-cover block"
             />
-
-            {/* Overlay teks */}
-            <div
-              className={`
-                absolute inset-0 flex items-end px-5 pb-4
-                bg-gradient-to-t from-black/60 to-transparent
-                transition-opacity duration-300
-                ${hoveredIndex === index ? "opacity-100" : "opacity-0"}
-              `}
-            >
-              <span
-                className={`
-                  font-bold text-white text-base tracking-wide
-                  transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
-                  ${hoveredIndex === index ? "translate-y-0" : "translate-y-3"}
-                `}
-              >
-                Banner {banner.Id}
-              </span>
-            </div>
           </div>
         ))}
       </div>
 
-      {/* Keyframe scroll-x — tambahkan ke tailwind.config.js */}
-      <style>{`
-        @keyframes scroll-x {
-          from { transform: translateX(0); }
-          to   { transform: translateX(-50%); }
-        }
-      `}</style>
+      {/* Tombol Prev */}
+      <button
+        onClick={handlePrev}
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white rounded-full w-10 h-10 shadow-md flex items-center justify-center"
+      >
+        ←
+      </button>
+
+      {/* Tombol Next */}
+      <button
+        onClick={handleNext}
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white rounded-full w-10 h-10 shadow-md flex items-center justify-center"
+      >
+        →
+      </button>
+
     </div>
   );
 };
