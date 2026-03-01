@@ -2,12 +2,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 // NOTE AJA:
-    // Responsive:
-    // sm	  >640px	  Small         → tablet / landscape hp kecil
-    // md	  >768px	  Medium        → tablet besar / laptop mini
-    // lg	  >1024px	  Large         → laptop / desktop
-    // xl	  >1280px	  Extra large   → desktop besar
-    // 2xl	>1536px	  Very large    → layar ultra-wide
+// Responsive:
+// sm	  >640px	  Small         → tablet / landscape hp kecil
+// md	  >768px	  Medium        → tablet besar / laptop mini
+// lg	  >1024px	  Large         → laptop / desktop
+// xl	  >1280px	  Extra large   → desktop besar
+// 2xl	>1536px	  Very large    → layar ultra-wide
 
 /* NOTE:: Kode Search bar - To Navbar */
 function Searchbar() {
@@ -48,15 +48,13 @@ function Menu({
       <Link
         to={href}
         onClick={onClick}
-        className={`group relative inline-block text-[11px] font-medium tracking-widest uppercase transition-all duration-200 ease-in-out hover:scale-105 ${
-          isActive ? 'text-white' : 'text-white/60 hover:text-white'
-        }`}
+        className={`group relative inline-block text-[11px] font-medium tracking-widest uppercase transition-all duration-200 ease-in-out hover:scale-105 ${isActive ? 'text-white' : 'text-white/60 hover:text-white'
+          }`}
       >
         {label}
         <span
-          className={`absolute left-1/2 -translate-x-1/2 -bottom-1 h-px bg-white transition-all duration-300 ease-out ${
-            isActive ? 'w-3' : 'w-0 group-hover:w-3'
-          }`}
+          className={`absolute left-1/2 -translate-x-1/2 -bottom-1 h-px bg-white transition-all duration-300 ease-out ${isActive ? 'w-3' : 'w-0 group-hover:w-3'
+            }`}
         />
       </Link>
     </li>
@@ -103,16 +101,14 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
       {/* Backdrop */}
       <div
         onClick={onClose}
-        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 lg:hidden ${
-          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 lg:hidden ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
       />
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 bg-blue-dark z-50 flex flex-col transition-transform duration-300 ease-in-out lg:hidden shadow-2xl ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={`fixed top-0 right-0 h-full w-72 bg-blue-dark z-50 flex flex-col transition-transform duration-300 ease-in-out lg:hidden shadow-2xl ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         {/* Drawer Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
