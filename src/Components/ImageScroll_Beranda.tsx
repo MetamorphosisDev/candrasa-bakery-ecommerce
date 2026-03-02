@@ -43,7 +43,7 @@ const BannerScrolling: React.FC = () => {
           <div
             key={index}
             ref={index === 0 ? cardRef : null} // hanya ukur card pertama
-            className="relative shrink-0 w-[80vw] sm:w-[60vw] md:w-[45vw] lg:w-[680px] overflow-hidden rounded-2xl cursor-pointer"
+            className="relative shrink-0 w-[80vw] sm:w-[60vw] md:w-[45vw] lg:w-170 overflow-hidden rounded-2xl cursor-pointer"
           >
             <img
               src={banner.img}
