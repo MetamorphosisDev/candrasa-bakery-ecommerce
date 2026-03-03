@@ -11,7 +11,7 @@ function Status_Pesanan() {
                     <p className="text-blue-dark font-bold text-xl max-[445px]:text-xl">Diperjalanan</p>
                     <div className="flex flex-col gap-2">
                         <div className="flex justify-between gap-2">
-                            <p className="text-blue-dark font-semibold text-[10px]">
+                            <p className="text-blue-danrk font-semibold text-[10px]">
                                 <span className="max-[445px]:hidden">Total: </span>
                                 <span>Rp121.000</span>
                             </p>
@@ -51,7 +51,7 @@ function Riwayat_Pemesanan() {
 
 function Beranda() {
     return (
-        <div className="beranda-page-top bg-gray-light px-4 py-6 max-[445px]:py-2 max-[475px]:px-2.5">
+        <div className="beranda-page-top bg-gray-light px-4 max-[445px]:py-2 max-[475px]:px-2.5">
             <div className="flex flex-col lg:flex-row items-center gap-6 max-[768px]:gap-0">
                 <div className="w-full lg:w-2/3">
                     <BannerScrolling />
