@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { data } from "../Data/imagedata";
 
-const GAP = 20; // gap-5 = 20px
+const GAP = 20;
 
 const BannerScrolling: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -43,7 +43,7 @@ const BannerScrolling: React.FC = () => {
           <div
             key={index}
             ref={index === 0 ? cardRef : null} // hanya ukur card pertama
-            className="relative shrink-0 w-[80vw] sm:w-[60vw] md:w-[45vw] lg:w-170 overflow-hidden rounded-2xl cursor-pointer"
+            className="relative shrink-0 w-[80vw] sm:w-[60vw] md:w-[45vw] lg:w-240 h-120 overflow-hidden rounded-2xl cursor-pointer"
           >
             <img
               src={banner.img}

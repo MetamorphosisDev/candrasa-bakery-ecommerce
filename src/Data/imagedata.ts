@@ -29,5 +29,10 @@ export const data: Banner[] = [
     Id: 5,
     img: '/Images/Gambar-halaman-utama-banner_upd.png',
     description: 'Promo besar di sini 1'
+  },
+  {
+    Id: 6,
+    img: '/Images/back-testing.png',
+    description: 'Testing'
   }
 ]; 
