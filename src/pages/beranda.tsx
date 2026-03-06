@@ -1,5 +1,6 @@
 import BannerScrolling from "../components/ImageScroll_Beranda";
 import { pexelsImageList } from "../Data/pexels_bread";
+import { Ratinglist } from "../Data/pexels_bread";
 
 
 function Status_Pesanan() {
@@ -90,9 +91,40 @@ function Product() {
             <p className="font-bold font-inter text-blue-dark text-[18px]">Roti lembut dengan berbagai isian manis untuk menemeani hari Anda.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {pexelsImageList.map((product) =>
-                    <div className="bg-white-theme p-3">
-                        <div className="relative w-66 h-33 overflow-hidden border-2 rounded-lg">
+                    <div className="bg-white-theme p-3 rounded-xl flex flex-col gap-2.5">
+                        <div className="relative w-76 h-43 overflow-hidden border-2 rounded-lg">
                             <img src={product.img} alt={product.alt} className="w-full h-full object-cover" />
+                            <img src={product.populer} className={`w-4.5 absolute inset-0 left-3 top-1.5 
+                            ${product.populer === "" ? "hidden" : ""}`}
+                                alt={product.alt} />
+                            <p className={`absolute inset-0 font-inter w-15 h-4 rounded-2xl 
+                            items-center justify-center left-57 top-35 text-white text-xs pl-3
+                                ${product.stok === "Ready" ? "bg-green-600" : "bg-red-700"}`}>
+                                {product.stok}
+                                {/* {/* ${product.stok === "Ready" ? "bg-green-600" : product.stok === "Habis" ? "bg-red-700" : "bg-gray-400"}`}>
+                                    {product.stok} */}
+                            </p>
+                        </div>
+                        <div className="">
+                            <div className="">
+                                <p className="font-poppins font-semibold tracking-wider text-[18px]">{product.nama}</p>
+                                <p className="font-inter text-xs font-bold bg-orange-light w-20 text-center rounded-4xl">{product.harga}</p>
+                                <div className="flex gap-2 items-center">
+                                    <p className="text-purple text-[20px] font-black"> {product.rating}</p>
+                                    <p className="font-inter text-[13px] mt-1 font-medium">
+                                        {
+                                            product.rating === Ratinglist[1] ? "1.0/5.0" :
+                                                product.rating === Ratinglist[2] ? "2.0/5.0" :
+                                                    product.rating === Ratinglist[3] ? "3.0/5.0" :
+                                                        product.rating === Ratinglist[4] ? "4.0/5.0" :
+                                                            product.rating === Ratinglist[5] ? "5.0/5.0" : ""
+
+                                        }
+                                    </p>
+                                </div>
+                                <p className="text-[12px]">{product.deskripsi}</p>
+                            </div>
+                            <div className=""></div>
                         </div>
                     </div>
                 )}
