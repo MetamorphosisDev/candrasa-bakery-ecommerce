@@ -1,5 +1,7 @@
 import BannerScrolling from "../components/ImageScroll_Beranda";
 import Product from "../components/ProductCard"
+import MenuProduct from "../components/MenuProduct";
+import Feedback_User from "../components/FeedbackCard";
 
 
 function Status_Pesanan() {
@@ -103,11 +105,25 @@ function Beranda() {
                 <Pilihkategori />
             </div>
             <div className="p-7">
-                <p className="font-poppins font-semibold">Menu Kami</p>
-                <p>Pilih roti Favorit Anda dan nikmati berbagai promo menarik setiap hari.</p>
+                <p className="font-poppins font-semibold max-[425px]:text-[13px]">Menu Kami</p>
+                <p className="max-[425px]:text-[9px]">Pilih roti Favorit Anda dan nikmati berbagai promo menarik setiap hari.</p>
             </div>
-            <div className="product">
-                <Product />
+            <div className="flex flex-col gap-10">
+                <div className="product">
+                    <Product />
+                </div>
+                <div className="Menu lainnya">
+                    <MenuProduct />
+                </div>
+            </div>
+            <div className="feedback p-7">
+                <div className="teks">
+                    <p className="text-[22px] font-semibold">Apa yang mereka bicarakan?</p>
+                    <p className="text-[15px] font-medium">Kesan dan cerita pelanggan terhadap produk kami. </p>
+                </div>
+                <div className="">
+                    <Feedback_User />
+                </div>
             </div>
         </div>
 
