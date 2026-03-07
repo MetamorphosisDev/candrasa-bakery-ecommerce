@@ -2,7 +2,7 @@ import BannerScrolling from "../components/ImageScroll_Beranda";
 import Product from "../components/ProductCard"
 import MenuProduct from "../components/MenuProduct";
 import Feedback_User from "../components/FeedbackCard";
-import Footer_ from "../components/Footer";
+import Footerr from "../components/Footer";
 
 
 function Status_Pesanan() {
@@ -127,7 +127,7 @@ function Beranda() {
                 </div>
             </div>
             <div className="">
-                <Footer_ />
+                <Footerr />
             </div>
         </div>
 

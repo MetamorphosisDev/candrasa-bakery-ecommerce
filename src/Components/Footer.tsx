@@ -1,4 +1,4 @@
-function Footer_() {
+function Footerr() {
     return (
         <footer className="bg-[#4040E8] text-white px-8 sm:px-12 lg:px-20 pt-12 pb-6">
             {/* Main Footer Content */}
@@ -83,4 +83,4 @@ function Footer_() {
     )
 }
 
-export default Footer_
+export default Footerr
