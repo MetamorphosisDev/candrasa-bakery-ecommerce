@@ -2,6 +2,7 @@ import BannerScrolling from "../components/ImageScroll_Beranda";
 import Product from "../components/ProductCard"
 import MenuProduct from "../components/MenuProduct";
 import Feedback_User from "../components/FeedbackCard";
+import Footer_ from "../components/Footer";
 
 
 function Status_Pesanan() {
@@ -121,9 +122,12 @@ function Beranda() {
                     <p className="text-[22px] font-semibold">Apa yang mereka bicarakan?</p>
                     <p className="text-[15px] font-medium">Kesan dan cerita pelanggan terhadap produk kami. </p>
                 </div>
-                <div className="">
+                <div className="py-8">
                     <Feedback_User />
                 </div>
+            </div>
+            <div className="">
+                <Footer_ />
             </div>
         </div>
 

@@ -1,5 +1,6 @@
 import { pexelsImageList } from "../Data/pexels_bread";
 import { Ratinglist } from "../Data/pexels_bread";
+import Footer_ from "./Footer";
 
 function Product() {
     return (
