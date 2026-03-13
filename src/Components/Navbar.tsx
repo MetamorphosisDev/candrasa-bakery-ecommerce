@@ -171,7 +171,7 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
               />
             </div>
             <Link
-              to="/login_user"
+              to="/login"
               onClick={onClose}
               className="flex items-center gap-2 text-[11px] font-medium tracking-widest uppercase text-white/60 hover:text-white transition-colors duration-200"
             >
@@ -249,7 +249,7 @@ function Navbar() {
             <div className="hidden lg:flex items-center gap-5">
               <div className="w-px h-3 bg-white/20" />
               <Link
-                to="/login_user"
+                to="/login"
                 className="flex items-center gap-2 text-[11px] font-medium tracking-widest uppercase text-white/60 hover:text-white transition-colors duration-200"
               >
                 Login
@@ -264,9 +264,9 @@ function Navbar() {
             {/* Mobile/Tablet: Login icon + Hamburger */}
             <div className="flex items-center gap-4 lg:hidden">
               <Link
-                to="/login_user"
+                to="/login"
                 className="opacity-50 hover:opacity-100 transition-opacity duration-200"
-                aria-label="Login"
+                aria-label="login"
               >
                 <img src="/Icon/IconLogin.png" alt="Login" className="w-7" />
               </Link>
