@@ -4,6 +4,7 @@
 
 
 ![Preview](./public/Images/Logo/logo-web-full-color.svg)
+<br/>
 
 **Candrasa Bakery — Digital Storefront**
 
