@@ -16,6 +16,9 @@
 ![Last Commit](https://img.shields.io/github/last-commit/MetamorphosisDev/candrasa-bakery-ecommerce?style=flat-square)
 [![License: MIT](https://img.shields.io/badge/License-MIT-f59e0b?style=flat-square)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-22c55e?style=flat-square)]()
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06b6d4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+<br/>
+![Last Commit](https://img.shields.io/github/last-commit/username/repo?style=flat-square)
 
 </div>
 
