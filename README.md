@@ -15,11 +15,11 @@
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-6-646cff?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-f59e0b?style=flat-square)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active-22c55e?style=flat-square)]()
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06b6d4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 <br/>
 ![Last Commit](https://img.shields.io/github/last-commit/MetamorphosisDev/candrasa-bakery-ecommerce?style=flat-square)
+[![License: MIT](https://img.shields.io/badge/License-MIT-f59e0b?style=flat-square)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Active-22c55e?style=flat-square)]()
 
 </div>
 
