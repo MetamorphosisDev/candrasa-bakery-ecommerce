@@ -8,8 +8,6 @@
 
 **Candrasa Bakery — Digital Storefront**
 
-*Fresh from the oven, straight to your screen.*
-
 <br/>
 
 [![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react&logoColor=white)](https://react.dev/)
