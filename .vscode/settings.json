@@ -1,0 +1,8 @@
+// ? | Formatter
+
+{
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.wordWrap": "on",
+  "editor.renderWhitespace": "boundary"
+}
