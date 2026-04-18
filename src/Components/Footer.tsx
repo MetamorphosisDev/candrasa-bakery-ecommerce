@@ -12,7 +12,7 @@ function Footerr() {
                         <img src="/Images/Logo/logo-web-full.png" alt="Candrasa Logo" className="w-50 object-contain" />
                     </div>
 
-                    {/* Kontak Utama */}
+                    {/* Kontak Utama */} 
                     <div className="flex flex-col gap-3">
                         <p className="font-poppins font-bold text-white text-base">Kontak Utama</p>
                         <div className="flex items-center gap-3">

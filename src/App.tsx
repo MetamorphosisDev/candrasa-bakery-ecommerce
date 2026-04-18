@@ -3,12 +3,16 @@ import { lazy, Suspense } from "react";
 
 import Navbar from "./components/Navbar";
 
-const Beranda = lazy(() => import("./pages/beranda"));
-const Lokasi = lazy(() => import("./pages/lokasi"));
-const NewsAndPromo = lazy(() => import("./pages/newsandpromo"));
-const FAQCustomer = lazy(() => import("./pages/faqcustomer"));
-const About = lazy(() => import("./pages/about"));
-const Login_user = lazy(() => import("./User_Account/login"));
+
+const routes = [
+  { path: "/", component: lazy(() => import("./pages/beranda")) },
+  { path: "/lokasi", component: lazy(() => import("./pages/lokasi")) },
+  { path: "/newsandpromo", component: lazy(() => import("./pages/newsandpromo")) },
+  { path: "/faq", component: lazy(() => import("./pages/faqcustomer")) },
+  { path: "/about", component: lazy(() => import("./pages/about")) },
+  { path: "/login", component: lazy(() => import("./User_Account/login")) },
+  { path: "/register", component: lazy(() => import("./User_Account/register")) },
+];
 
 function App() {
   return (
@@ -28,12 +32,9 @@ function App() {
         }
       >
         <Routes>
-          <Route path="/" element={<Beranda />} />
-          <Route path="/lokasi" element={<Lokasi />} />
-          <Route path="/newsandpromo" element={<NewsAndPromo />} />
-          <Route path="/faq" element={<FAQCustomer />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login_user />} />
+          {routes.map(({ path, component: Component }) => (
+            <Route key={path} path={path} element={<Component />} />
+          ))}
         </Routes>
       </Suspense>
 
