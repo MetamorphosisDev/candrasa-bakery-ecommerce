@@ -1,8 +1,8 @@
-import BannerScrolling from "../components/ImageScroll_Beranda";
-import Product from "../components/ProductCard"
-import MenuProduct from "../components/MenuProduct";
-import Feedback_User from "../components/FeedbackCard";
-import Footerr from "../components/Footer";
+import BannerScrolling from "../Components/ImageScroll_Beranda";
+import Product from "../Components/ProductCard"
+import MenuProduct from "../Components/MenuProduct";
+import Feedback_User from "../Components/FeedbackCard";
+import Footerr from "../Components/Footer";
 
 import RightAnimation from "../animations/RightAnimation";
 
