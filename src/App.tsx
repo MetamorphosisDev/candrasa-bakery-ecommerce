@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./Components/Navbar";
 
 
 const routes = [
