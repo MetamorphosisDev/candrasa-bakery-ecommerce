@@ -1,8 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
-
-import Navbar from "./components/Navbar";
-
+import Navbar from "./Components/Navbar";
 
 const routes = [
   { path: "/", component: lazy(() => import("./pages/beranda")) },
@@ -14,10 +12,16 @@ const routes = [
   { path: "/register", component: lazy(() => import("./User_Account/register")) },
 ];
 
-function App() {
+// Pisah komponen biar bisa pakai useLocation (harus di dalam BrowserRouter)
+function AppLayout() {
+  const location = useLocation();
+
+  const hideNavbarPaths = ["/login", "/register"];
+  const showNavbar = !hideNavbarPaths.includes(location.pathname);
+
   return (
-    <BrowserRouter>
-      <Navbar />
+    <>
+      {showNavbar && <Navbar />}
 
       <Suspense
         fallback={
@@ -37,7 +41,14 @@ function App() {
           ))}
         </Routes>
       </Suspense>
+    </>
+  );
+}
 
+function App() {
+  return (
+    <BrowserRouter>
+      <AppLayout />
     </BrowserRouter>
   );
 }
